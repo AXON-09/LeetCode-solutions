@@ -1,10 +1,8 @@
 class Solution:
     def nextGreaterElement(self, nums1: List[int], nums2: List[int]) -> List[int]:
-        l=-1
         h={}
         p=[]
         s=[]
-        m=-1
         for i in range(len(nums2)-1,-1,-1):
             if not s:
                 h[nums2[i]]=-1
