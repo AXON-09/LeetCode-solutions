@@ -20,11 +20,8 @@ class Solution:
             else:
                 tmp2 = 0   
             n = tmp1 + tmp2 + c
-            if n > 9:
-                c = n//10
-                n %= 10
-            else:
-                c = 0
+            c = n // 10
+            n = n % 10
             cur.next = ListNode(n)
             cur = cur.next
         if c != 0:
