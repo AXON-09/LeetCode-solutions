@@ -18,8 +18,8 @@ class Solution:
                 n2 += tmp2*10**p
                 l2 = l2.next    
             p += 1
-        sum = n1+n2
-        l = [int(s) for s in str(sum)[::-1]]
+        sm = n1+n2
+        l = [int(s) for s in str(sm)[::-1]]
         d=ListNode(0)
         c = d
         for t in l:
