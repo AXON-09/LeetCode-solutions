@@ -24,9 +24,8 @@ class Solution:
             n = n % 10
             cur.next = ListNode(n)
             cur = cur.next
-        if c != 0:
-            cur.next = ListNode(c)
-            cur = cur.next
+        if c:
+           cur.next = ListNode(c)
         return d.next
 
 
