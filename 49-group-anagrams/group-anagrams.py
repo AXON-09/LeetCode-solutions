@@ -7,9 +7,8 @@ class Solution:
                 lst[ord(ch) - ord('a')] += 1
             lst = tuple(lst)
             if frq.get(lst,0) == 0:
-               frq[lst] = [word]
-            else:
-                frq[lst] = frq.get(lst) + [word]
+               frq[lst] = []
+            frq[lst] = frq.get(lst) + [word]
         return list(frq.values())
 
             
