@@ -1,18 +1,20 @@
 class Solution:
     def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
-        grp = {}
-
+        frq = dict()
         for word in strs:
-            freq = [0] * 26
-
+            lst = [0]*26
             for ch in word:
-                freq[ord(ch) - ord('a')] += 1
+                lst[ord(ch) - ord('a')] += 1
+            lst = tuple(lst)
+            if frq.get(lst,0) == 0:
+               frq[lst] = [word]
+            else:
+                frq[lst] = frq.get(lst) + [word]
+        return list(frq.values())
 
-            key = tuple(freq)
+            
+        
 
-            if key not in grp:
-                grp[key] = []
-
-            grp[key].append(word)
-
-        return list(grp.values())
+                
+        
+            
