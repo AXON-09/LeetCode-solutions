@@ -18,7 +18,7 @@ class Solution:
                    r = stack.pop()
                    l = stack.pop()
                    stack.append(l - r)
-        return stack.pop()
+        return stack[-1]
                 
 
         
